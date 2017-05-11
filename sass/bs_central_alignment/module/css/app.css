@@ -1,0 +1,81 @@
+/*************************
+VERTICAL ALIGNMENT MIXINS
+**************************
+
+*********************************
+1. Traditional table-cell method
+*********************************
+
+To allow text to expand horizontally, lose the $inner parameter from the mixin.
+Can be adjusted to have inner and outer height and width if necessary.
+Needs two nested divs *inside* the bootstrap col div. Th eouter one with class "tc_va" and inner with class "inner".
+/
+
+// @mixin tc_va ($outer, $inner){
+// 	display: table-cell;
+// 	width: $outer;
+// 	height: $outer;
+// 	vertical-align: middle;
+// 	text-align: center;
+// 	//border: 1px solid gold;
+
+// 		.inner {
+// 		    display: inline-block;
+// 		    width: $inner; 
+// 		    height: $inner;
+// 		    //border: 1px solid rebeccapurple;
+// 		}	
+// }
+
+// .tc_va {
+// 	@include tc_va(500px,200px);
+// }
+
+
+
+
+/*
+*********************************
+2. Modern transform method
+*********************************
+
+mixin class can be added to the bootstrap col class
+no need to specify the dimensions of the the inner element although can be down if desired
+can use percentages to specify outer width
+*/
+/*
+@mixin tr_va ($outer_w, $outer_h){
+
+	  position: relative;
+	  width: $outer_w;
+	  height: $outer_h;
+	  border: 1px solid red;
+
+	.inner {
+	  position: absolute;
+	  top: 50%; left: 50%;
+	  transform: translate(-50%,-50%);
+	  border: 1px solid blue;
+	}
+
+}
+
+.tr_va {
+	@include tr_va(33.3%,300px);
+}
+*/
+/*
+*********************************
+3. Modern flexbox method
+*********************************
+
+no need for inner element - just apply the mixin class to the bootsrap column class
+*/
+.fl_va {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  height: 400px; }
+
+/*# sourceMappingURL=app.css.map */

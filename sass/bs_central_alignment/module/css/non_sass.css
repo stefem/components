@@ -1,0 +1,41 @@
+/* table layout - works with older browsers better. Also works with bootstrap 3 but need two nested divs inside the col div - .cn and .inner */
+.cn {
+  display: table-cell;
+  width: 500px;
+  height: 500px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid gold;
+}
+
+.inner {
+  display: inline-block;
+  width: 200px; height: 200px;
+  border: 1px solid rebeccapurple;
+}
+
+
+/* With transform - works with bootstrap 3 - just add the cn class to the bootstrap col class and have another div inside with the class 'inner' */
+/*.cn {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+}
+
+.inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid blue;
+}*/
+
+/* With flexbox - works with bootstrap 3 - just at the class to the bootstrap col class */
+/*.flex_valign {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border: 1px solid green;
+  height: 400px;  
+}*/
+
