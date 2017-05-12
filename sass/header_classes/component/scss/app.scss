@@ -1,0 +1,77 @@
+/*************************
+HEADER CLASSES MIXIN
+**************************
+
+Gets round problem of more than one h1 per page and how that affects SEO
+$m: multiplier
+$last: last element of list
+
+takes body font size, here referred to as "base font" as a parameter
+*/
+
+$base_font: 16;
+
+body {
+	font-size: $base_font;
+}
+
+
+/* function to allow second argument to math_round in sass - this actually needs to be stored in a separate base file. Using this function, we can specify the number of decimal places ion the em value in the function below.*/
+
+@function pow($x, $n) {
+  $ret: 1;
+
+  @if $n >= 0 {
+    @for $i from 1 through $n {
+      $ret: $ret * $x;
+    }
+  } @else {
+    @for $i from $n to 0 {
+      $ret: $ret / $x;
+    }
+  }
+  @return $ret;
+}
+
+@function precision-round($float, $digits) {
+  $sass-precision: 5;
+
+  @if $digits > $sass-precision {
+    @warn "Sass sets default precision to #{$sass-precision} digits, and there is no way to change that for now."
+    + "The returned number will have #{$sass-precision} digits, even if you asked for `#{$digits}`."
+    + "See github.com/sass/sass/issues/1122 for further informations.";
+  }
+
+  $pow: pow(10, $digits);
+
+  @return round($float * $pow) / $pow;
+}
+
+/* actual header class mixin */
+
+@mixin header_classes ($base_font, $m, $last){
+	@for $i from 1 through $last {
+		.header_#{$i} {
+			font-size: #{precision-round(((-$i + ($last + 1)) * $m) / $base_font,2)}em;
+			font-size: #{(-$i + ($last + 1)) * $m}px;
+			margin: 0;
+			padding:0;
+			border: 0;
+			vertical-align: baseline;
+		}
+	}
+}
+
+
+@include header_classes ($base_font, 7,6);
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+/*************************
+HEADER CLASSES MIXIN
+**************************
+
+Gets round problem of more than one h1 per page and how that affects SEO
+$m: multiplier
+$last: last element of list
+
+takes body font size, here referred to as "base font" as a parameter
+*/
+body {
+  font-size: 16; }
+
+/* function to allow second argument to math_round in sass - this actually needs to be stored in a separate base file. Using this function, we can specify the number of decimal places ion the em value in the function below.*/
+/* actual header class mixin */
+.header_1 {
+  font-size: 2.63em;
+  font-size: 42px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+.header_2 {
+  font-size: 2.19em;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+.header_3 {
+  font-size: 1.75em;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+.header_4 {
+  font-size: 1.31em;
+  font-size: 21px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+.header_5 {
+  font-size: 0.88em;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+.header_6 {
+  font-size: 0.44em;
+  font-size: 7px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/*# sourceMappingURL=app.css.map */

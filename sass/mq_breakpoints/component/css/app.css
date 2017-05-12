@@ -1,0 +1,16 @@
+/****************************
+MEDIA QUERY BREAKPOINT MIXIN
+*****************************
+
+Sets a series of breakpoints. Min parameter can be changed to max. NB this is already done for you in bootstrap 4: https://v4-alpha.getbootstrap.com/layout/overview/
+
+*/
+.test-class {
+  padding: 2rem;
+  font-size: 1.8rem; }
+  @media only screen and (min-width: 1024px) {
+    .test-class {
+      padding-top: 4rem;
+      font-size: 2.4rem; } }
+
+/*# sourceMappingURL=app.css.map */

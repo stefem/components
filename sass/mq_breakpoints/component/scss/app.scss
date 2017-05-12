@@ -1,0 +1,55 @@
+/****************************
+MEDIA QUERY BREAKPOINT MIXIN
+*****************************
+
+Sets a series of breakpoints. Min parameter can be changed to max. NB this is already done for you in bootstrap 4: https://v4-alpha.getbootstrap.com/layout/overview/
+
+*/
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+
+$bs3_breakpoints: (
+    "xs": 480px,
+    "sm": 768px,
+    "md": 992px,
+    "lg": 1200px
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+.test-class {
+    padding: 2rem;
+    font-size: 1.8rem;
+    @include mq('tablet-wide') {
+        padding-top: 4rem;
+        font-size: 2.4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
