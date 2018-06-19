@@ -1,0 +1,90 @@
+/* NB specificity below for box-sizing - grid only */
+.row {
+    margin-bottom: 1rem;    
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    box-sizing: border-box;
+}
+
+/* For mobile phones and tablets: */
+[class*="col-"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+[class*="col-"] .row {
+    margin-bottom: 0;
+}
+
+
+@media only screen and (min-width: 992px) {
+    /* For desktop: */
+
+    .row {
+        margin-bottom: 3rem;    
+    }
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    [class*="col-"] {
+        float: left;
+        /*padding: 15px;*/ /* uncomment to enable padding bretween cols */
+        box-sizing: border-box;
+        /*margin-bottom: 5rem;        */
+        padding-right: 1rem;
+    }
+
+    [class*="col-"] [class*="col-"] {
+        /*margin-bottom: 1rem;*/
+    }
+
+    [class*="col-"]:last-child {
+        padding-right: 0; /* uncomment if padding between columns is enabled above. this will keep last col flush to the right of the containing row */
+    } 
+ 
+}
+
+
+/* work arounds */
+/* removes margin-bottom to compensate for full image element background and maintain vertical spacing */
+#pageHeader.row {
+    margin-bottom: 0;    
+}
+
+#gallery .col-2 {
+    width: 33.33%;
+    float: left;
+}
+
+@media only screen and (min-width: 992px) {
+    #gallery .col-2 {
+        width: 16.66%;
+    }
+}
+
+#footer.row {
+    margin-bottom: 0;
+}
+
+#footer [class*="col-"] {
+    margin-bottom: 3rem;
+}
+
+#subfooter.row {
+    margin-bottom: 0;
+}
