@@ -1,0 +1,62 @@
+
+/* 
+https://css-tricks.com/centering-css-complete-guide/
+*/
+html {
+	font-family: Montserrat, sans-serif;
+	font-size: 16px;
+	color: #666;	
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	width: 800px;
+	border: 1px solid gold;
+}
+
+.horizontal-centre-block {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.horizontal-centre-inline {
+    text-align: center;
+    border: 3px solid red;
+}
+
+main {
+  background: white;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+main div {
+  background: black;
+  color: white;
+  padding: 15px;
+  max-width: 125px;
+  margin: 5px;
+}
+
+.inline-block-center {
+  text-align: center;
+}
+.inline-block-center div {
+  display: inline-block;
+  text-align: left;
+}
+
+
+img {
+	width: 200px;
+}
+
+
+@media only screen and (min-width: 992px) {
+	
+
+
+} /* End min-width 992 media query*/
