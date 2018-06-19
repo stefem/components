@@ -1,0 +1,130 @@
+
+/* 
+https://css-tricks.com/centering-css-complete-guide/
+*/
+html {
+	font-family: Montserrat, sans-serif;
+	font-size: 16px;
+	color: #666;	
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	width: 800px;
+	border: 1px solid gold;
+}
+
+main#inline-single-line-padding {
+  background: white;
+  margin: 20px 0;
+  padding: 50px;
+}
+
+main#inline-single-line-padding a {
+  background: black;
+  color: white;
+  padding: 40px 30px;
+  text-decoration: none;
+}
+
+main#inline-single-line-line-height {
+  background: white;
+  margin: 20px 0;
+  padding: 40px;
+}
+
+main#inline-single-line-line-height div {
+  background: black;
+  color: white;
+  height: 100px;
+  line-height: 100px;
+  padding: 20px;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.inline-multiple-lines-css-table {
+  display: table;
+  height: 250px;
+  background: white;
+  width: 240px;
+  margin: 20px;
+}
+.inline-multiple-lines-css-table p {
+  display: table-cell;
+  margin: 0;
+  background: black;
+  color: white;
+  padding: 20px;
+  border: 10px solid white;
+  vertical-align: middle;
+}
+
+.inline-multiple-lines-ghost-center {
+  position: relative;
+}
+.inline-multiple-lines-ghost-center::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 1%;
+  vertical-align: middle;
+}
+.inline-multiple-lines-ghost-center p {
+  display: inline-block;
+  vertical-align: middle;
+  width: 190px;
+  margin: 0;
+  padding: 20px;
+  background: black;
+}
+
+main#block-level-known-height {
+  background: white;
+  height: 300px;
+  margin: 20px;
+  width: 300px;
+  position: relative;
+  resize: vertical;
+  overflow: auto;
+  border: 3px solid red;
+}
+
+main#block-level-known-height div {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  height: 100px;
+  margin-top: -70px;
+  background: black;
+  color: white;
+  padding: 20px;
+}
+main#block-level-unknown-height {
+  background: white;
+  height: 300px;
+  margin: 20px;
+  width: 300px;
+  position: relative;
+  resize: vertical;
+  overflow: auto;
+  border: 3px solid chartreuse;
+}
+
+main#block-level-unknown-height div {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 20px;
+  transform: translateY(-50%);
+  resize: vertical;
+  overflow: auto;
+}
+@media only screen and (min-width: 992px) {
+	
+} /* End min-width 992 media query*/

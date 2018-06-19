@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="../../favicon.ico">
+
+	    <title>vertical centre</title>
+
+	    <!-- Import CSS -->
+	    <link href="css/style.css" rel="stylesheet">
+		</head>
+
+	<body>
+	<div class="container">
+		<!-- inline-single-line using padding -->
+		<main id="inline-single-line-padding">
+		  <a href="#0">We're</a>
+		  <a href="#0">Centered</a>
+		  <a href="#0">Bits of</a>
+		  <a href="#0">Text</a>
+		</main>
+		
+		<!-- #inline-single-line-line-height using line height -->
+		<main id="inline-single-line-line-height">
+		  <div>
+		    I'm a centered line.
+		  </div>
+		</main>
+
+		<!-- #inline-many-lines-table using css display table -->
+		<!-- only works if container has a height -->
+		<div class="inline-multiple-lines-css-table">
+		  <p>I'm vertically centered multiple lines of text in a CSS-created table layout.</p>
+		</div>
+
+		<!-- #inline-many-lines-ghost-centre -->
+		<!-- Works if container doesn't have a height -->
+		<div class="inline-multiple-lines-ghost-center">
+		  <p>I'm vertically centered multiple lines of text in a container. Centered with a ghost pseudo element</p>
+		</div>
+
+		<!-- #block-level-known-height -->
+		<main id="block-level-known-height">
+			<div>
+			 I'm a block-level element with a fixed height, centered vertically within my parent.
+			</div>
+		</main>
+
+		<!-- #block-level-unknown-height -->
+		<main id="block-level-unknown-height">
+			<div>
+			 I'm a block-level element with an unknown height, centered vertically within my parent.
+			</div>
+		</main>		
+
+
+
+
+
+
+	</div>
+	
+
+    <!-- javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
